@@ -1,4 +1,4 @@
-package estoque;
+package entities;
 
 public class Product {
 
@@ -18,4 +18,13 @@ public class Product {
         this.quantity -= quantity;
     }
 
+    public String toString(){
+        return name
+                + ", $"
+                + String.format("%.2f", price)
+                + ", "
+                + quantity
+                + " units, Total: $ "
+                + String.format("%.2f", totalValueInStock());
+    }
 }
