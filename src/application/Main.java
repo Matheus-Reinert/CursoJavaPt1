@@ -1,10 +1,5 @@
 package application;
 
-import entities.*;
-import entities.Employee;
-import util.Calculator;
-
-import java.util.Locale;
 import java.util.Scanner;
 
 import static util.All.*;
@@ -37,7 +32,6 @@ public class Main {
             default -> System.out.println();
         }
     }
-
 }
 
 
