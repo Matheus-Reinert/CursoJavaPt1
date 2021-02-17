@@ -18,6 +18,7 @@ public class Main {
         System.out.println("5 - Stock");
         System.out.println("6 - StudentOO");
         System.out.println("7 - TriangleOO");
+        System.out.println("8 - Bank");
         System.out.print("Escolhe uma aí: ");
         int opc = sc.nextInt();
 
@@ -29,6 +30,7 @@ public class Main {
             case 5 -> Stock();
             case 6 -> StudentOO();
             case 7 -> TriangleOO();
+            case 8 -> Bank();
             default -> System.out.println();
         }
     }

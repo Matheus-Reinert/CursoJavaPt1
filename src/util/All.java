@@ -187,5 +187,49 @@ public class All {
         }
 
     }
+
+    public static  void Bank(){
+
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.print("Enter account number: ");
+        int AccountNum = sc.nextInt();
+        System.out.print("Enter account holder: ");
+        sc.nextLine();
+        String name = sc.nextLine();
+
+        System.out.print("Is there any deposit (y/n)");
+        char opc = sc.next().charAt(0);
+
+        Bank bank;
+
+        if(opc == 'y'){
+            System.out.print("Enter initial deposit value: ");
+            double initialDeposit = sc.nextDouble();
+            bank = new Bank(AccountNum, name, initialDeposit);
+        }
+        else {
+            bank = new Bank(AccountNum, name);
+        }
+
+        System.out.println("\nAccount data: ");
+        System.out.println(bank);
+
+        System.out.print("\nEnter a deposit value: ");
+        double deposit = sc.nextDouble();
+        bank.depositValue(deposit);
+        System.out.println("Update Account data: ");
+        System.out.print(bank);
+
+        System.out.print("\n\nEnter a withdraw value: ");
+        double withdraw = sc.nextDouble();
+        bank.withdrawValue(withdraw);
+        System.out.println("Update Account data: ");
+        System.out.print(bank.toString());
+
+    }
+
 }
 
