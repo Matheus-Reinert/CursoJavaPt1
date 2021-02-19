@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class All {
 
-    public static void areaTriangulo() {
+    public static void triangleArea() {
 
         Scanner sc = new Scanner(System.in);
         Locale.setDefault(Locale.US);
@@ -59,7 +59,7 @@ public class All {
 
         System.out.println(em);
 
-        System.out.print("Which percentage to increse salary? ");
+        System.out.print("Which percentage to increase salary? ");
         double percentage = sc.nextDouble();
         em.increaseSalary(percentage);
 
@@ -68,7 +68,7 @@ public class All {
         sc.close();
     }
 
-    public static void MembrosEstaticos(){
+    public static void staticMembers(){
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -186,6 +186,8 @@ public class All {
             System.out.println("Larger area: Y");
         }
 
+        sc.close();
+
     }
 
     public static  void Bank(){
@@ -229,7 +231,65 @@ public class All {
         System.out.println("Update Account data: ");
         System.out.print(bank.toString());
 
+        sc.close();
     }
+
+    public static void heightVector() {
+
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the amount of people: ");
+        int n = sc.nextInt();
+        double[] vector = new double[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter the height: ");
+            vector[i] = sc.nextDouble();
+        }
+
+        double sum = 0.0;
+
+        for (int i = 0; i < n; i++) {
+            sum += vector[i];
+        }
+
+        double avg = sum / n;
+        System.out.printf("Average: %.2f \n", avg);
+
+        sc.close();
+    }
+
+    public static void productsAverage() {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        ProductsAverage[] vector = new ProductsAverage[n];
+
+        for(int i = 0; i < vector.length; i++ ) {
+
+            sc.nextLine();
+            System.out.print("Enter the name of the Product: ");
+            String name = sc.nextLine();
+            System.out.print("Enter the price of the Product: ");
+            double price = sc.nextDouble();
+            vector[i] = new ProductsAverage(name, price);
+
+        }
+
+        double sum = 0.0;
+        for (int i = 0; i < vector.length; i++) {
+            sum += vector[i].getPrice();
+        }
+        double avg = sum / vector.length;
+
+        System.out.printf("Average price = %.2f \n", avg);
+
+        sc.close();
+    }
+
+
 
 }
 
