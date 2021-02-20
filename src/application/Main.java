@@ -21,6 +21,7 @@ public class Main {
         System.out.println("8 - Bank");
         System.out.println("9 - Heights");
         System.out.println("10 - Products Average: ");
+        System.out.println("11 - Hotel");
         System.out.print("Choose an option my friend: ");
         int opc = sc.nextInt();
 
@@ -35,6 +36,7 @@ public class Main {
             case 8 -> Bank();
             case 9 -> heightVector();
             case 10 -> productsAverage();
+            case 11 -> hotel();
             default -> System.out.println();
         }
     }

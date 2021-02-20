@@ -289,6 +289,45 @@ public class All {
         sc.close();
     }
 
+    public static void hotel(){
+
+        Scanner sc = new Scanner(System.in);
+
+        Hotel[] vector = new Hotel[10];
+        int roomNumber;
+        String name;
+        String email;
+
+        System.out.print("Enter the number of People: ");
+        int n = sc.nextInt();
+        sc.nextLine();
+
+        for (int i = 1; i <= n; i ++) {
+
+            System.out.print("Enter the room number: ");
+            roomNumber = sc.nextInt();
+            sc.nextLine();
+            System.out.print("Enter the name: ");
+            name = sc.nextLine();
+            System.out.print("Enter the email: ");
+            email = sc.nextLine();
+
+            vector[roomNumber] = new Hotel(name, email);
+        }
+
+        for (int i = 0; i < vector.length; i ++ ){
+
+            if(vector[i] != null){
+                System.out.println("Room Number: " + i +
+                        "\nName: " + vector[i].getName()
+                        + "\nEmail: "+ vector[i].getEmail());
+            }
+        }
+
+        sc.close();
+
+    }
+
 
 
 }
