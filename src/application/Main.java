@@ -23,6 +23,7 @@ public class Main {
         System.out.println("10 - Products Average: ");
         System.out.println("11 - Hotel");
         System.out.println("12 - List");
+        System.out.println("13 - List");
         System.out.print("Choose an option my friend: ");
         int opc = sc.nextInt();
 
@@ -40,6 +41,7 @@ public class Main {
             case 10 -> productsAverage();
             case 11 -> hotel();
             case 12 -> List();
+            case 13 -> employeeList();
             default -> System.out.println();
 
         }
