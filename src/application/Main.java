@@ -23,8 +23,9 @@ public class Main {
         System.out.println("10 - Products Average: ");
         System.out.println("11 - Hotel");
         System.out.println("12 - List");
-        System.out.println("13 - List");
+        System.out.println("13 - Employee List");
         System.out.println("14 - Matriz");
+        System.out.println("15 - Exercício Matriz");
         System.out.print("Choose an option my friend: ");
         int opc = sc.nextInt();
 
@@ -44,6 +45,8 @@ public class Main {
             case 12 -> list();
             case 13 -> employeeList();
             case 14 -> matriz();
+            case 15 -> exerMatriz();
+
             default -> System.out.println();
 
         }
