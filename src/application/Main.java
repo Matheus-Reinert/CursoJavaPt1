@@ -24,24 +24,26 @@ public class Main {
         System.out.println("11 - Hotel");
         System.out.println("12 - List");
         System.out.println("13 - List");
+        System.out.println("14 - Matriz");
         System.out.print("Choose an option my friend: ");
         int opc = sc.nextInt();
 
         switch (opc) {
 
             case 1 -> triangleArea();
-            case 2 -> EmployeeOO();
+            case 2 -> employeeOO();
             case 3 -> staticMembers();
-            case 4 -> RectangleOO();
-            case 5 -> Stock();
-            case 6 -> StudentOO();
-            case 7 -> TriangleOO();
-            case 8 -> Bank();
+            case 4 -> rectangleOO();
+            case 5 -> stock();
+            case 6 -> studentOO();
+            case 7 -> triangleOO();
+            case 8 -> bank();
             case 9 -> heightVector();
             case 10 -> productsAverage();
             case 11 -> hotel();
-            case 12 -> List();
+            case 12 -> list();
             case 13 -> employeeList();
+            case 14 -> matriz();
             default -> System.out.println();
 
         }

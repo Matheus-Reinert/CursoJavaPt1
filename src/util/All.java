@@ -46,7 +46,7 @@ public class All {
         sc.close();
     }
 
-    public static void EmployeeOO(){
+    public static void employeeOO(){
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -89,7 +89,7 @@ public class All {
 
     }
 
-    public static void RectangleOO(){
+    public static void rectangleOO(){
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -107,7 +107,7 @@ public class All {
 
     }
 
-    public static void Stock(){
+    public static void stock(){
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -139,7 +139,7 @@ public class All {
 
     }
 
-    public static void StudentOO(){
+    public static void studentOO(){
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -160,7 +160,7 @@ public class All {
 
     }
 
-    public static void TriangleOO(){
+    public static void triangleOO(){
 
         Scanner sc = new Scanner(System.in);
         Triangle x, y;
@@ -193,7 +193,7 @@ public class All {
 
     }
 
-    public static  void Bank(){
+    public static void bank(){
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -331,7 +331,7 @@ public class All {
 
     }
 
-    public static void List () {
+    public static void list () {
 
         List<String> list = new ArrayList<>();
 
@@ -432,6 +432,39 @@ public class All {
         EmployeeList emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
         return emp != null;
 
+    }
+
+    public static void matriz(){
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[][] mat = new int[n][n];
+
+        for (int i=0; i< mat.length; i++){
+            for(int j=0; j< mat[i].length; j++){
+                mat[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Main diagonal:");
+
+        for(int i = 0; i < mat.length; i++){
+            System.out.print(mat[i][i] + " ");
+        }
+
+        int count = 0;
+        for(int i = 0; i< mat.length; i++){
+            for(int j = 0; j< mat[i].length; j++){
+                if(mat[i][j] < 0){
+                    count++;
+                }
+            }
+            System.out.println("Negative numbers: " + count);
+        }
+
+
+        sc.close();
     }
 
 }
