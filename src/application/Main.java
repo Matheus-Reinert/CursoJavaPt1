@@ -28,7 +28,8 @@ public class Main {
         System.out.println("14 - Matriz");
         System.out.println("15 - Exercício Matriz");
         System.out.println("16 - Date");
-        System.out.println("16 - Date manipulation with calendar");
+        System.out.println("17 - Date manipulation with calendar");
+        System.out.println("18 - Date manipulation with calendar part2");
         System.out.print("Choose an option my friend: ");
         int opc = sc.nextInt();
 
@@ -51,6 +52,7 @@ public class Main {
             case 15 -> exerMatriz();
             case 16 -> date();
             case 17 -> calendarAndDate();
+            case 18 -> calendarAndDate2();
 
             default -> System.out.println();
 
