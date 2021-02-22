@@ -1,5 +1,6 @@
 package application;
 
+import java.text.ParseException;
 import java.util.Scanner;
 
 import static util.All.*;
@@ -7,7 +8,7 @@ import static util.All.*;
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
         Scanner sc = new Scanner(System.in);
 
@@ -26,6 +27,7 @@ public class Main {
         System.out.println("13 - Employee List");
         System.out.println("14 - Matriz");
         System.out.println("15 - Exercício Matriz");
+        System.out.println("16 - Date");
         System.out.print("Choose an option my friend: ");
         int opc = sc.nextInt();
 
@@ -46,6 +48,7 @@ public class Main {
             case 13 -> employeeList();
             case 14 -> matriz();
             case 15 -> exerMatriz();
+            case 16 -> date();
 
             default -> System.out.println();
 
