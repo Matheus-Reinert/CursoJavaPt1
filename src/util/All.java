@@ -556,6 +556,24 @@ public class All {
 
     }
 
+    public static void calendarAndDate(){
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyyHH:mm:ss");
+
+        Date d = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
+
+        System.out.println(sdf.format(d));
+
+        //Horário recebe + 4h
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(d);
+        cal.add(Calendar.HOUR_OF_DAY, 4);
+        d = cal.getTime();
+
+        System.out.println(sdf.format(d));
+
+    }
+
 
 
 }
